@@ -1,30 +1,73 @@
 import { Button } from "@/components/ui/button";
-import { hero } from "@/data/projects";
+import { featuredProjects } from "@/data/projects";
 import { NavLink } from "react-router-dom";
-import { FolderOpen, ArrowRight } from "lucide-react";
+import { ChevronDown } from "lucide-react";
+
 export default function Hero() {
-  return <section className="relative h-[68vh] min-h-[420px] w-full overflow-hidden">
-      <img src={hero.image} alt="Modern architectural building" className="absolute inset-0 h-full w-full object-cover" loading="eager" />
-      <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/30 to-background/10" />
-      <div className="relative z-10 container mx-auto h-full flex items-center">
-        <div className="max-w-2xl animate-enter">
-          <h1 className="font-display text-4xl md:text-5xl mb-4 leading-tight">
-            {hero.headline}
-          </h1>
-          <p className="text-muted-foreground mb-6">
-            {hero.sub}
-          </p>
-          <div className="flex flex-wrap gap-3">
-            <Button asChild variant="cta" size="cta">
-              <NavLink to="/portfolio">
-                
-                <span className="font-semibold">View Portfolio</span>
-                <ArrowRight />
-              </NavLink>
-            </Button>
-            <NavLink to="/contact"><Button variant="outline">Contact Us</Button></NavLink>
+  return (
+    <section className="min-h-screen bg-background flex flex-col">
+      {/* Hero Content */}
+      <div className="flex-1 container mx-auto px-4 py-16 flex flex-col justify-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
+          {/* Left side - Text Content */}
+          <div className="space-y-6 animate-fade-in">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight">
+              Transforming<br />
+              <span className="text-muted-foreground">Ideas</span> Architecture
+            </h1>
+            <p className="text-lg text-muted-foreground max-w-md leading-relaxed">
+              we specialize in turning creative concepts into immersive experiences, blending innovation with precision for a digital future
+            </p>
+          </div>
+
+          {/* Right side - Image Grid */}
+          <div className="grid grid-cols-2 gap-4 animate-fade-in">
+            <div className="space-y-4">
+              <div className="aspect-[4/3] overflow-hidden rounded-lg">
+                <img 
+                  src={featuredProjects[0]?.cover || "/src/assets/project-interior.jpg"} 
+                  alt="Modern interior space"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="aspect-[4/5] overflow-hidden rounded-lg">
+                <img 
+                  src={featuredProjects[1]?.cover || "/src/assets/project-corporate.jpg"} 
+                  alt="Corporate architecture"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+            </div>
+            <div className="space-y-4 pt-8">
+              <div className="aspect-[4/5] overflow-hidden rounded-lg">
+                <img 
+                  src={featuredProjects[2]?.cover || "/src/assets/project-education.jpg"} 
+                  alt="Educational facility"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="aspect-[4/3] overflow-hidden rounded-lg">
+                <img 
+                  src={featuredProjects[3]?.cover || "/src/assets/project-industrial.jpg"} 
+                  alt="Industrial building"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+            </div>
           </div>
         </div>
+
+        {/* Scroll Down Indicator */}
+        <div className="flex justify-center pt-8">
+          <button 
+            onClick={() => document.getElementById('about-section')?.scrollIntoView({ behavior: 'smooth' })}
+            className="w-12 h-12 rounded-full border border-muted-foreground/30 flex items-center justify-center hover:border-primary hover:bg-primary/5 transition-colors"
+            aria-label="Scroll to about section"
+          >
+            <ChevronDown className="w-5 h-5 text-muted-foreground" />
+          </button>
+        </div>
       </div>
-    </section>;
+    </section>
+  );
 }
