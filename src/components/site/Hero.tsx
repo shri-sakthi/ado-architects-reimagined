@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { hero } from "@/data/projects";
 import { NavLink } from "react-router-dom";
+import { FolderOpen, ArrowRight } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -21,7 +22,13 @@ export default function Hero() {
             {hero.sub}
           </p>
           <div className="flex flex-wrap gap-3">
-            <NavLink to="/portfolio"><Button variant="hero">View Portfolio</Button></NavLink>
+            <Button asChild variant="cta" size="cta">
+              <NavLink to="/portfolio">
+                <span className="inline-flex items-center justify-center h-7 w-7 rounded-md border border-primary-foreground/70"><FolderOpen /></span>
+                <span className="font-semibold">View Portfolio</span>
+                <ArrowRight />
+              </NavLink>
+            </Button>
             <NavLink to="/contact"><Button variant="outline">Contact Us</Button></NavLink>
           </div>
         </div>

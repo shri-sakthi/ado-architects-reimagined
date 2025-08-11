@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { toast } from "@/hooks/use-toast";
+import { Mail, ArrowRight } from "lucide-react";
 
 const schema = z.object({
   name: z.string().min(2, "Please enter your full name"),
@@ -59,8 +60,10 @@ export default function Contact() {
                 <Textarea rows={5} {...register("message")} aria-invalid={!!errors.message} />
                 {errors.message && <p className="text-xs text-destructive mt-1">{errors.message.message}</p>}
               </div>
-              <Button type="submit" variant="hero" disabled={isSubmitting}>
-                {isSubmitting ? "Sending..." : "Send Message"}
+              <Button type="submit" variant="cta" size="cta" disabled={isSubmitting}>
+                <span className="inline-flex items-center justify-center h-7 w-7 rounded-md border border-primary-foreground/70"><Mail /></span>
+                <span className="font-semibold">{isSubmitting ? "Sending..." : "Send Message"}</span>
+                <ArrowRight />
               </Button>
             </form>
           </div>

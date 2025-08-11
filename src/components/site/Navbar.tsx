@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { Menu } from "lucide-react";
+import { Menu, Mail, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -39,9 +39,15 @@ export default function Navbar() {
               {item.label}
             </NavLink>
           ))}
-          <NavLink to="/contact">
-            <Button variant="hero" className="ml-2">Get in touch</Button>
-          </NavLink>
+          <Button asChild variant="cta" size="cta" className="ml-2">
+            <NavLink to="/contact">
+              <span className="inline-flex items-center justify-center h-7 w-7 rounded-md border border-primary-foreground/70">
+                <Mail />
+              </span>
+              <span className="font-semibold">Get in touch</span>
+              <ArrowRight />
+            </NavLink>
+          </Button>
         </nav>
 
         {/* Mobile nav */}
@@ -67,9 +73,13 @@ export default function Navbar() {
                     {item.label}
                   </NavLink>
                 ))}
-                <NavLink to="/contact" onClick={() => setOpen(false)}>
-                  <Button variant="hero" className="w-full">Get in touch</Button>
-                </NavLink>
+                <Button asChild variant="cta" size="cta" className="w-full">
+                  <NavLink to="/contact" onClick={() => setOpen(false)}>
+                    <span className="inline-flex items-center justify-center h-7 w-7 rounded-md border border-primary-foreground/70"><Mail /></span>
+                    <span className="font-semibold">Get in touch</span>
+                    <ArrowRight />
+                  </NavLink>
+                </Button>
               </nav>
             </SheetContent>
           </Sheet>
