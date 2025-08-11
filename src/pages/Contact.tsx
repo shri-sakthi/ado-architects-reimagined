@@ -9,29 +9,34 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { toast } from "@/hooks/use-toast";
 import { Mail, ArrowRight } from "lucide-react";
-
 const schema = z.object({
   name: z.string().min(2, "Please enter your full name"),
   email: z.string().email("Enter a valid email address"),
-  message: z.string().min(10, "Please enter a short message"),
+  message: z.string().min(10, "Please enter a short message")
 });
-
 type FormData = z.infer<typeof schema>;
-
 export default function Contact() {
-  const { register, handleSubmit, formState: { errors, isSubmitting }, reset } = useForm<FormData>({
-    resolver: zodResolver(schema),
+  const {
+    register,
+    handleSubmit,
+    formState: {
+      errors,
+      isSubmitting
+    },
+    reset
+  } = useForm<FormData>({
+    resolver: zodResolver(schema)
   });
-
   const onSubmit = async (data: FormData) => {
     // Placeholder submit — could be wired to Supabase or an email service
-    await new Promise((r) => setTimeout(r, 600));
-    toast({ title: "Message sent", description: "Thanks for reaching out — we'll get back to you shortly." });
+    await new Promise(r => setTimeout(r, 600));
+    toast({
+      title: "Message sent",
+      description: "Thanks for reaching out — we'll get back to you shortly."
+    });
     reset();
   };
-
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       <Helmet>
         <title>Contact Us | ADO Architects</title>
         <meta name="description" content="Get in touch with ADO Architects' Pretoria and Cape Town offices. Send an enquiry or locate us on the map." />
@@ -61,7 +66,7 @@ export default function Contact() {
                 {errors.message && <p className="text-xs text-destructive mt-1">{errors.message.message}</p>}
               </div>
               <Button type="submit" variant="cta" size="cta" disabled={isSubmitting}>
-                <span className="inline-flex items-center justify-center h-7 w-7 rounded-md border border-primary-foreground/70"><Mail /></span>
+                
                 <span className="font-semibold">{isSubmitting ? "Sending..." : "Send Message"}</span>
                 <ArrowRight />
               </Button>
@@ -74,13 +79,7 @@ export default function Contact() {
               <p className="text-sm text-muted-foreground">Director: D. de Villiers – devilliers@ado-architects.com</p>
               <p className="text-sm text-muted-foreground">Phone: +27 (0)12 000 0000</p>
               <div className="mt-3 aspect-[16/10] rounded-lg overflow-hidden border">
-                <iframe
-                  title="Pretoria map"
-                  className="h-full w-full"
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  src="https://www.google.com/maps?q=Pretoria%2C%20South%20Africa&output=embed"
-                />
+                <iframe title="Pretoria map" className="h-full w-full" loading="lazy" referrerPolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Pretoria%2C%20South%20Africa&output=embed" />
               </div>
             </div>
 
@@ -89,19 +88,12 @@ export default function Contact() {
               <p className="text-sm text-muted-foreground">Director: A. Ortner – aortner@ado-architects.com</p>
               <p className="text-sm text-muted-foreground">Phone: +27 (0)21 000 0000</p>
               <div className="mt-3 aspect-[16/10] rounded-lg overflow-hidden border">
-                <iframe
-                  title="Cape Town map"
-                  className="h-full w-full"
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  src="https://www.google.com/maps?q=Cape%20Town%2C%20South%20Africa&output=embed"
-                />
+                <iframe title="Cape Town map" className="h-full w-full" loading="lazy" referrerPolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Cape%20Town%2C%20South%20Africa&output=embed" />
               </div>
             </div>
           </div>
         </section>
       </main>
       <Footer />
-    </div>
-  );
+    </div>;
 }
