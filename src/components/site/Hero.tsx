@@ -2,6 +2,10 @@ import { Button } from "@/components/ui/button";
 import { featuredProjects } from "@/data/projects";
 import { NavLink } from "react-router-dom";
 import { ChevronDown } from "lucide-react";
+import imgInterior from "@/assets/project-interior.jpg";
+import imgCorporate from "@/assets/project-corporate.jpg";
+import imgEducation from "@/assets/project-education.jpg";
+import imgIndustrial from "@/assets/project-industrial.jpg";
 
 export default function Hero() {
   return (
@@ -25,14 +29,14 @@ export default function Hero() {
             <div className="space-y-4">
               <div className="aspect-[4/3] overflow-hidden rounded-lg">
                 <img 
-                  src={featuredProjects[0]?.cover || "/src/assets/project-interior.jpg"} 
+                  src={featuredProjects[0]?.cover || imgInterior} 
                   alt="Modern interior space"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="aspect-[4/5] overflow-hidden rounded-lg">
                 <img 
-                  src={featuredProjects[1]?.cover || "/src/assets/project-corporate.jpg"} 
+                  src={featuredProjects[1]?.cover || imgCorporate} 
                   alt="Corporate architecture"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
@@ -41,14 +45,14 @@ export default function Hero() {
             <div className="space-y-4 pt-8">
               <div className="aspect-[4/5] overflow-hidden rounded-lg">
                 <img 
-                  src={featuredProjects[2]?.cover || "/src/assets/project-education.jpg"} 
+                  src={featuredProjects[2]?.cover || imgEducation} 
                   alt="Educational facility"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="aspect-[4/3] overflow-hidden rounded-lg">
                 <img 
-                  src={featuredProjects[3]?.cover || "/src/assets/project-industrial.jpg"} 
+                  src={featuredProjects[3]?.cover || imgIndustrial} 
                   alt="Industrial building"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
