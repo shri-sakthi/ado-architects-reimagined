@@ -11,22 +11,22 @@ export default function Hero() {
   return (
     <section className="min-h-screen bg-background flex flex-col">
       {/* Hero Content */}
-      <div className="flex-1 container mx-auto px-4 py-16 flex flex-col justify-center">
-        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
+      <div className="flex-1 container mx-auto px-4 py-8 md:py-12 lg:py-16 flex flex-col justify-center">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center min-h-[70vh] md:min-h-[80vh]">
           {/* Left side - Text Content */}
-          <div className="space-y-6 animate-fade-in">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight">
+          <div className="space-y-4 md:space-y-6 animate-fade-in order-2 lg:order-1">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight tracking-tight">
               Transforming<br />
               <span className="text-muted-foreground">Ideas</span> Architecture
             </h1>
-            <p className="text-lg text-muted-foreground max-w-md leading-relaxed">
+            <p className="text-base md:text-lg text-muted-foreground max-w-md leading-relaxed">
               we specialize in turning creative concepts into immersive experiences, blending innovation with precision for a digital future
             </p>
           </div>
 
           {/* Right side - Image Grid */}
-          <div className="grid grid-cols-2 gap-4 animate-fade-in">
-            <div className="space-y-4">
+          <div className="grid grid-cols-2 gap-3 md:gap-4 animate-fade-in order-1 lg:order-2">
+            <div className="space-y-3 md:space-y-4">
               <div className="aspect-[4/3] overflow-hidden rounded-lg">
                 <img 
                   src={featuredProjects[0]?.cover || imgInterior} 
@@ -42,7 +42,7 @@ export default function Hero() {
                 />
               </div>
             </div>
-            <div className="space-y-4 pt-8">
+            <div className="space-y-3 md:space-y-4 pt-4 md:pt-8">
               <div className="aspect-[4/5] overflow-hidden rounded-lg">
                 <img 
                   src={featuredProjects[2]?.cover || imgEducation} 

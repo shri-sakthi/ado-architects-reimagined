@@ -28,9 +28,9 @@ const activeCls = ({
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   return <header className="sticky top-0 z-40 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/70 border-b">
-      <div className="container mx-auto flex items-center justify-between py-3">
+      <div className="container mx-auto flex items-center justify-between py-3 px-4">
         <NavLink to="/" className="flex items-center gap-3">
-          <img src={logoUrl} alt="ADO Architects logo" className="h-10 w-auto" loading="eager" />
+          <img src={logoUrl} alt="ADO Architects logo" className="h-8 md:h-10 w-auto" loading="eager" />
         </NavLink>
 
         {/* Desktop nav */}
