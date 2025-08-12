@@ -76,7 +76,9 @@ export default function Contact() {
           <div className="space-y-8">
             <div>
               <h3 className="font-medium">Pretoria Office</h3>
-              <p className="text-sm text-muted-foreground">Director: D. de Villiers – devilliers@ado-architects.com</p>
+              <p className="text-sm text-muted-foreground">Director: Thomas Ortner
+
+ – to@ado-architects.co.za</p>
               <p className="text-sm text-muted-foreground">Phone: +27 (0)12 000 0000</p>
               <div className="mt-3 aspect-[16/10] rounded-lg overflow-hidden border">
                 <iframe title="Pretoria map" className="h-full w-full" loading="lazy" referrerPolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Pretoria%2C%20South%20Africa&output=embed" />
