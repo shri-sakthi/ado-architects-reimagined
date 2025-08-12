@@ -11,8 +11,8 @@ export default function Hero() {
   return (
     <section className="min-h-screen bg-background flex flex-col">
       {/* Hero Content */}
-      <div className="flex-1 container mx-auto px-4 py-8 md:py-12 lg:py-16 flex flex-col justify-center">
-        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center min-h-[70vh] md:min-h-[80vh]">
+      <div className="flex-1 container mx-auto px-6 md:px-8 lg:px-12 py-8 md:py-12 lg:py-16 flex flex-col justify-center">
+        <div className="grid lg:grid-cols-2 gap-6 md:gap-8 items-center min-h-[70vh] md:min-h-[80vh]">
           {/* Left side - Text Content */}
           <div className="space-y-4 md:space-y-6 animate-fade-in order-2 lg:order-1">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight tracking-tight">
