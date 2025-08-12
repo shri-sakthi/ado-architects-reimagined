@@ -3,11 +3,11 @@ import { NavLink } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="border-t bg-secondary/30 mt-16">
+    <footer className="mt-16 border-t bg-[hsl(var(--footer-background))] text-[hsl(var(--footer-foreground))]">
       <div className="container mx-auto grid gap-10 md:grid-cols-4 py-12">
         <div className="space-y-3">
           <h3 className="text-lg font-semibold">ADO Architects</h3>
-          <p className="text-muted-foreground">
+          <p>
             Innovative designs, timeless structures. Professional architectural
             services across South Africa.
           </p>
@@ -43,7 +43,7 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      <div className="border-t py-4 text-center text-xs text-muted-foreground">© {new Date().getFullYear()} ADO Architects. All rights reserved.</div>
+      <div className="border-t py-4 text-center text-xs">© {new Date().getFullYear()} ADO Architects. All rights reserved.</div>
     </footer>
   );
 }

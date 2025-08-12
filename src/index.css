@@ -54,6 +54,10 @@ All colors MUST be HSL. */
     --shadow-elegant: 0 16px 40px -12px hsl(var(--primary) / 0.25);
     --shadow-glow: 0 8px 24px -6px hsl(var(--primary-glow) / 0.35);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Footer */
+    --footer-background: 229 47% 16%;
+    --footer-foreground: 0 0% 100%;
   }
 
   .dark {
@@ -93,6 +97,10 @@ All colors MUST be HSL. */
     --sidebar-accent-foreground: 240 5% 96%;
     --sidebar-border: 240 4% 16%;
     --sidebar-ring: 217 91% 60%;
+
+    /* Footer */
+    --footer-background: 229 47% 16%;
+    --footer-foreground: 0 0% 100%;
   }
 }
 
