@@ -6,10 +6,8 @@ import imgInterior from "@/assets/project-interior.jpg";
 import imgCorporate from "@/assets/project-corporate.jpg";
 import imgEducation from "@/assets/project-education.jpg";
 import imgIndustrial from "@/assets/project-industrial.jpg";
-
 export default function Hero() {
-  return (
-    <section className="min-h-screen bg-background flex flex-col">
+  return <section className="min-h-screen bg-background flex flex-col">
       {/* Hero Content */}
       <div className="flex-1 container mx-auto px-6 md:px-8 lg:px-12 py-8 md:py-12 lg:py-16 flex flex-col justify-center">
         <div className="grid lg:grid-cols-2 gap-6 md:gap-8 items-center min-h-[70vh] md:min-h-[80vh]">
@@ -28,34 +26,18 @@ export default function Hero() {
           <div className="grid grid-cols-2 gap-3 md:gap-4 animate-fade-in order-1 lg:order-2">
             <div className="space-y-3 md:space-y-4">
               <div className="aspect-[4/3] overflow-hidden rounded-lg">
-                <img 
-                  src={featuredProjects[0]?.cover || imgInterior} 
-                  alt="Modern interior space"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                />
+                <img src={featuredProjects[0]?.cover || imgInterior} alt="Modern interior space" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
               </div>
               <div className="aspect-[4/5] overflow-hidden rounded-lg">
-                <img 
-                  src={featuredProjects[1]?.cover || imgCorporate} 
-                  alt="Corporate architecture"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                />
+                <img src={featuredProjects[1]?.cover || imgCorporate} alt="Corporate architecture" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
               </div>
             </div>
             <div className="space-y-3 md:space-y-4 pt-4 md:pt-8">
               <div className="aspect-[4/5] overflow-hidden rounded-lg">
-                <img 
-                  src={featuredProjects[2]?.cover || imgEducation} 
-                  alt="Educational facility"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                />
+                <img src={featuredProjects[2]?.cover || imgEducation} alt="Educational facility" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
               </div>
               <div className="aspect-[4/3] overflow-hidden rounded-lg">
-                <img 
-                  src={featuredProjects[3]?.cover || imgIndustrial} 
-                  alt="Industrial building"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                />
+                <img src={featuredProjects[3]?.cover || imgIndustrial} alt="Industrial building" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
               </div>
             </div>
           </div>
@@ -63,15 +45,8 @@ export default function Hero() {
 
         {/* Scroll Down Indicator */}
         <div className="flex justify-center pt-8">
-          <button 
-            onClick={() => document.getElementById('about-section')?.scrollIntoView({ behavior: 'smooth' })}
-            className="w-12 h-12 rounded-full border border-muted-foreground/30 flex items-center justify-center hover:border-primary hover:bg-primary/5 transition-colors"
-            aria-label="Scroll to about section"
-          >
-            <ChevronDown className="w-5 h-5 text-muted-foreground" />
-          </button>
+          
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }
