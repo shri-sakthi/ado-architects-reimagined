@@ -75,22 +75,42 @@ export default function Contact() {
 
           <div className="space-y-8">
             <div>
-              <h3 className="font-medium">Pretoria Office</h3>
-              <p className="text-sm text-muted-foreground">Director: Thomas Ortner
-
- – to@ado-architects.co.za</p>
-              <p className="text-sm text-muted-foreground">Phone: +27 (0)12 000 0000</p>
-              <div className="mt-3 aspect-[16/10] rounded-lg overflow-hidden border">
-                <iframe title="Pretoria map" className="h-full w-full" loading="lazy" referrerPolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Pretoria%2C%20South%20Africa&output=embed" />
+              <h3 className="font-medium text-lg">Pretoria Office</h3>
+              <div className="space-y-2 mt-3">
+                <p className="text-sm"><span className="font-medium">Director:</span> Thomas Ortner</p>
+                <p className="text-sm"><span className="font-medium">Email:</span> to@ado-architects.co.za</p>
+                <p className="text-sm"><span className="font-medium">Phone:</span> (012) 347-3515</p>
+                <div className="space-y-1">
+                  <p className="text-sm"><span className="font-medium">Address:</span></p>
+                  <p className="text-sm text-muted-foreground">382 Rigel Avenue<br />Erasmusrand<br />Pretoria 0181</p>
+                </div>
+                <div className="space-y-1">
+                  <p className="text-sm"><span className="font-medium">Postal Address:</span></p>
+                  <p className="text-sm text-muted-foreground">PO Box 37787<br />Faerie Glen, Pretoria 0043</p>
+                </div>
+              </div>
+              <div className="mt-4 aspect-[16/10] rounded-lg overflow-hidden border">
+                <iframe title="Pretoria map" className="h-full w-full" loading="lazy" referrerPolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=382+Rigel+Avenue,+Erasmusrand,+Pretoria,+0181,+South+Africa&output=embed" />
               </div>
             </div>
 
             <div>
-              <h3 className="font-medium">Cape Town Office</h3>
-              <p className="text-sm text-muted-foreground">Director: A. Ortner – aortner@ado-architects.com</p>
-              <p className="text-sm text-muted-foreground">Phone: +27 (0)21 000 0000</p>
-              <div className="mt-3 aspect-[16/10] rounded-lg overflow-hidden border">
-                <iframe title="Cape Town map" className="h-full w-full" loading="lazy" referrerPolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Cape%20Town%2C%20South%20Africa&output=embed" />
+              <h3 className="font-medium text-lg">Cape Town Office</h3>
+              <div className="space-y-2 mt-3">
+                <p className="text-sm"><span className="font-medium">Director:</span> Johan de Villiers</p>
+                <p className="text-sm"><span className="font-medium">Email:</span> jdv@ado-architects.co.za</p>
+                <p className="text-sm"><span className="font-medium">Phone:</span> (021) 854-3109</p>
+                <div className="space-y-1">
+                  <p className="text-sm"><span className="font-medium">Address:</span></p>
+                  <p className="text-sm text-muted-foreground">3 Myburgh Street<br />Strand<br />Cape Town 7140</p>
+                </div>
+                <div className="space-y-1">
+                  <p className="text-sm"><span className="font-medium">Postal Address:</span></p>
+                  <p className="text-sm text-muted-foreground">PO Box 513<br />Strand, Western Cape 7139</p>
+                </div>
+              </div>
+              <div className="mt-4 aspect-[16/10] rounded-lg overflow-hidden border">
+                <iframe title="Cape Town map" className="h-full w-full" loading="lazy" referrerPolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=3+Myburgh+Street,+Strand,+Cape+Town,+7140,+South+Africa&output=embed" />
               </div>
             </div>
           </div>
