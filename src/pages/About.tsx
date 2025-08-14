@@ -14,16 +14,16 @@ export default function About() {
       </Helmet>
       <Navbar />
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-background via-muted/20 to-background py-20">
+      <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6">
+            <div className="inline-block px-4 py-2 bg-white/10 text-white rounded-full text-sm font-medium mb-6">
               About ADO Architects
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-orange-400 to-yellow-400 bg-clip-text text-transparent">
               Design-Led Architecture with Technical Excellence
             </h1>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg text-white/80 max-w-2xl mx-auto leading-relaxed">
               ADO Architects is a design‑led practice with a strong technical backbone. Our work balances clarity, craft and context to deliver enduring value for clients and communities.
             </p>
           </div>
