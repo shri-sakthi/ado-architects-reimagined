@@ -1,9 +1,7 @@
 import { Mail, Phone, MapPin, Linkedin, Facebook } from "lucide-react";
 import { NavLink } from "react-router-dom";
-
 export default function Footer() {
-  return (
-    <footer className="mt-16 border-t bg-[hsl(var(--footer-background))] text-[hsl(var(--footer-foreground))]">
+  return <footer className="mt-16 border-t bg-[hsl(var(--footer-background))] text-[hsl(var(--footer-foreground))]">
       <div className="container mx-auto grid gap-10 md:grid-cols-4 py-12">
         <div className="space-y-3">
           <h3 className="text-lg font-semibold">ADO Architects</h3>
@@ -43,7 +41,6 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      <div className="border-t py-4 text-center text-xs">© {new Date().getFullYear()} ADO Architects. All rights reserved.</div>
-    </footer>
-  );
+      <div className="py-4 text-center text-xs">© {new Date().getFullYear()} ADO Architects. All rights reserved.</div>
+    </footer>;
 }
