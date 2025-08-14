@@ -7,7 +7,7 @@ import ProjectCard from "@/components/site/ProjectCard";
 import { featuredProjects } from "@/data/projects";
 import { Button } from "@/components/ui/button";
 import { NavLink } from "react-router-dom";
-import imgInterior from "@/assets/project-interior.jpg";
+import imgBuilding from "@/assets/building-exterior.jpg";
 
 const Index = () => {
   return (
@@ -24,7 +24,7 @@ const Index = () => {
 
         {/* About Section */}
         <section id="about-section" className="bg-muted/20">
-          <div className="container mx-auto px-4 py-12 md:py-16 lg:py-20">
+          <div className="container mx-auto px-6 md:px-8 lg:px-12 py-12 md:py-16 lg:py-20">
             <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
               {/* Left side - About Content */}
               <div className="space-y-6 md:space-y-8 order-2 lg:order-1">
@@ -50,8 +50,8 @@ const Index = () => {
               <div className="relative order-1 lg:order-2">
                 <div className="aspect-[4/5] overflow-hidden rounded-lg">
                   <img 
-                    src={imgInterior} 
-                    alt="Modern architectural interior with gallery wall"
+                    src={imgBuilding} 
+                    alt="Modern gray building architecture by Steven Hylands"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -62,7 +62,7 @@ const Index = () => {
 
         {/* Featured Projects Section */}
         <section className="bg-background">
-          <div className="container mx-auto px-4 py-12 md:py-16 lg:py-20">
+          <div className="container mx-auto px-6 md:px-8 lg:px-12 py-12 md:py-16 lg:py-20">
             <div className="text-center mb-10 md:mb-12 lg:mb-16">
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">Featured Projects</h2>
               <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
